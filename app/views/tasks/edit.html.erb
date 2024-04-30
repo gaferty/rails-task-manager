@@ -1,0 +1,10 @@
+<h1>Editing a task</h1>
+<%=@task.title%>
+
+<%= form_with model:@task do |f|%>
+  <%=f.label :title, "Title"%>
+  <%=f.text_field :title%>
+  <%=f.label :details, "Details"%>
+  <%=f.text_area :details%>
+  <%= f.submit "Update your task"%>
+<%end%>
